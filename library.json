@@ -11,9 +11,7 @@
     "type": "git",
     "url": "https://github.com/electronicsguy/HTTPSRedirect.git"
   },
-  "version": "2.1",
-  "frameworks": [
-        "arduino",
-   ],
+  "version": "2.1.1",
+  "frameworks": "arduino",
   "platforms": "*"
 }
