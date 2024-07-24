@@ -190,7 +190,7 @@ void HTTPSRedirect::fetchHeader(void){
   String line = "";
   int pos = -1;
   int pos2 = -1;
-  int pos3 = -1;
+  //int pos3 = -1;
 
   _hF.transferEncoding = "";
   _hF.contentLength = 0;
