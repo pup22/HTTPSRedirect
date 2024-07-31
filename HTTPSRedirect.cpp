@@ -310,10 +310,11 @@ unsigned int HTTPSRedirect::getResponseStatus(void){
   unsigned int pos = -1;
   unsigned int pos2 = -1;
 
-  // Skip any empty lines    при обрыве соединения уходит в цикл (не решено)
-  // do{
+  // Skip any empty lines    при обрыве соединения уходит в цикл (ограничил временем)
+  uint32_t timer = millis();
+  do{
     line = readStringUntil('\n');
-  // }while(line.length() == 0);
+  }while(line.length() == 0 && (millis() - timer) <= 10000);
   
   pos = line.indexOf("HTTP/1.1 ");
   pos2 = line.indexOf(" ", 9);
